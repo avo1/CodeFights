@@ -33,3 +33,16 @@ func productExceptSelf(nums: [Int], m: Int) -> Int {
     return g % m
 }
 
+
+// translated k_lee's solution
+
+func productExceptSelf2(nums: [Int], m: Int) -> Int {
+    var p = 1
+    var g = 0
+    for i in 0..<nums.count {
+        let x = nums[i]
+        g = (g * x + p) % m
+        p = (p * x) % m
+    }
+    return g
+}
