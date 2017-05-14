@@ -1,5 +1,10 @@
-// https://codefights.com/arcade/intro/level-7/vExYvcGnFsEYSt8nQ
+// https://codefights.com/arcade/code-arcade/intro-gates/vExYvcGnFsEYSt8nQ
 
 func circleOfNumbers(n: Int, firstNumber: Int) -> Int {
-    return firstNumber < n / 2 ? firstNumber + n/2 : firstNumber - n/2
+    var mid: Int = n/2
+    if (firstNumber < mid) {
+        return firstNumber + mid
+    } else {
+        return firstNumber - mid
+    }
 }
